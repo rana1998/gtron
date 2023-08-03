@@ -1376,15 +1376,15 @@ class AdminHelper
             $stmt->bindParam(':owner_id_fk', $res['owner_id']);  
             $stmt->bindParam(':wallet_address', $res['wallet_address']);  
             $stmt->execute();
-            echo "Data inserted successfully.";
+            return "Data inserted successfully.";
         } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
+            return "Error: " . $e->getMessage();
         }
             // Close the database connection
             $db  = null;
             // return $response;
         } catch (PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+            return "Connection failed: " . $e->getMessage();
         }
     }
 

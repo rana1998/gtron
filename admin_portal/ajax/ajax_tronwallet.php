@@ -50,10 +50,10 @@ if(isset($_SESSION['isOTPmatch']) && $_SESSION['isOTPmatch'] == true) {
     // echo "cURL Error #:" . $err;
     echo "failed";
     } else {
-        // $res = AdminHelper::updateAdminWalletSummeryLogs($db,$gtronAmount,$receiverWalletAddress);
-        // if($res == 'Data inserted successfully.') {
+        $res = AdminHelper::updateAdminWalletSummeryLogs($db,$gtronAmount,$receiverWalletAddress);
+        if($res == 'Data inserted successfully.') {
             echo $response;
-        // }
+        }
     }
 } else {
     echo "failed";
